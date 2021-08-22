@@ -29,7 +29,7 @@ const PlaceTemplate = ({ place }: PlaceTemplateProps) => {
   return (
     <>
       <LinkWrapper href="/">
-        <CloseOutline size={32} aria-label="Go back to map" />
+        <CloseOutline size={32} aria-label="Back to home" />
       </LinkWrapper>
 
       <S.Wrapper>
