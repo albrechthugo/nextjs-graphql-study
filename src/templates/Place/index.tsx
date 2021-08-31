@@ -1,5 +1,6 @@
-import LinkWrapper from 'components/LinkWrapper'
 import Image from 'next/image'
+import { NextSeo } from 'next-seo'
+import LinkWrapper from 'components/LinkWrapper'
 import * as S from './styles'
 import { CloseOutline } from '@styled-icons/evaicons-outline/CloseOutline'
 import { useRouter } from 'next/dist/client/router'
@@ -28,6 +29,10 @@ const PlaceTemplate = ({ place }: PlaceTemplateProps) => {
 
   return (
     <>
+      <NextSeo
+        title={`${place.name} | Next Places`}
+        description={place.description.text || `Where? ${place.name}`}
+      />
       <LinkWrapper href="/">
         <CloseOutline size={32} aria-label="Back to home" />
       </LinkWrapper>

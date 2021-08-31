@@ -23,6 +23,7 @@ const Map = ({ places }: MapProps) => {
   return (
     <MapContainer
       center={[0, 0]}
+      minZoom={3}
       zoom={3}
       scrollWheelZoom={true}
       style={{ height: '100%', width: '100%' }}

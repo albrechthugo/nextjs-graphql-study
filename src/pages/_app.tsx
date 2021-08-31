@@ -2,12 +2,13 @@ import { AppProps } from 'next/app'
 import Head from 'next/head'
 import GlobalStyles from 'styles/global'
 import NextNProgress from 'nextjs-progressbar'
+import SEO from '../../next-seo.config'
+import { DefaultSeo } from 'next-seo'
 
 function App({ Component, pageProps }: AppProps) {
   return (
     <>
       <Head>
-        <title>Next Boilerplate</title>
         <link rel="manifest" href="/manifest.json" />
         <link
           rel="stylesheet"
@@ -16,11 +17,8 @@ function App({ Component, pageProps }: AppProps) {
           crossOrigin=""
         />
         <meta name="theme-color" content="#030518" />
-        <meta
-          name="description"
-          content="A simple project starter to work with NextJS, Typescript, React and Styled-Components"
-        />
       </Head>
+      <DefaultSeo {...SEO} />
       <GlobalStyles />
 
       <NextNProgress color="#2596be" stopDelayMs={200} height={4} />
